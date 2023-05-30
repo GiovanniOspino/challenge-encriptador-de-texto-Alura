@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge Encriptador de texto</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="imagenes/icono.png">
+</head>
+<body>
+    <header>
+        <img src="imagenes/logo-alura.png" alt="Logo de Alura" class="logo-alura">
+    </header>
+    <main>
+        <section class="sec-uno">
+            <div>
+                <textarea name="texto-entrada" id="textoEntrada" class="texto-entrada" cols="30" rows="10" placeholder="Ingrese el texto aquí"></textarea>
+            </div>
+            <div class="advertencia">
+                <img src="imagenes/logo-advertencia.png" alt="Advertencia" class="logo-advertencia">
+                <span>Solo letras minúsculas y sin acentos</span>
+            </div>
+            <div class="botones">
+                <button class="encriptar" id="botonEncriptar">Encriptar</button>
+                <button class="desencriptar" id="botonDesencriptar">Desencriptar</button>
+            </div>
+        </section>
+        <section class="sec-dos">
+            <textarea name="texto-salida" id="textoSalida" class="texto-salida" cols="30" rows="10" readonly></textarea>
+            <div class="contenedor-copiar">
+                <button class="copiar" id="botonCopiar">Copiar</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <h4>Desarrollado por: Giovanni Ospino</h4>
+        <a href="https://www.linkedin.com/in/giovanni-ospino-alvarado-991a70201/"><img src="imagenes/linkedin-logo.png" alt="Logo LinkedIn" class="iconos-footer"></a>
+        <a href="https://github.com/GiovanniOspino"><img src="imagenes/github-sign.png" alt="Logo Github" class="iconos-footer"></a>
+    </footer>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+<script>
+    var boton1 = document.querySelector("#botonEncriptar");
+    boton1.onclick = encriptar;
+    var boton2 = document.querySelector("#botonDesencriptar");
+    boton2.onclick = desencriptar;
+    var boton3 = document.querySelector("#botonCopiar");
+    boton3.onclick = copiar;
+</script>
+</html>
